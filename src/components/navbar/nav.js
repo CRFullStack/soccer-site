@@ -9,7 +9,8 @@ import {
   Button,
   Fab,
   Typography,
-  Hidden
+  Hidden,
+  Drawer
 } from "@material-ui/core";
 import { Link as Links } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -28,6 +29,19 @@ ScrollTop.propTypes = {
 
 export default function BackToTop(props) {
   const classes = useStyles2();
+  const [state, setState] = React.useState({
+    right: false
+  });
+  const toggleDrawer = (side, open) => event => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [side]: open });
+  };
 
   return (
     <React.Fragment>
@@ -48,9 +62,44 @@ export default function BackToTop(props) {
               className={classes.links}
               color="inherit"
               aria-label="menu"
+              onClick={toggleDrawer("right", true)}
             >
               <MenuIcon />
             </IconButton>
+            <Drawer
+              anchor="right"
+              open={state.right}
+              onClose={toggleDrawer("right", false)}
+            >
+              <div>
+                <Typography component={"div"} className={classes.links}>
+                  <Link
+                    component={Links}
+                    to={`/`}
+                    color="inherit"
+                    className={classes.link}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    component={Links}
+                    to={`/signup`}
+                    color="inherit"
+                    className={classes.link}
+                  >
+                    Sign Up
+                  </Link>
+                  <Link
+                    component={Links}
+                    to={`/contact`}
+                    color="inherit"
+                    className={classes.link}
+                  >
+                    Contact
+                  </Link>
+                </Typography>
+              </div>
+            </Drawer>
           </Hidden>
           <Hidden smDown>
             <Typography component={"div"} className={classes.links}>
