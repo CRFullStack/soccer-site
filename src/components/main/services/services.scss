@@ -1,0 +1,66 @@
+@import "../../../index.scss"; /* All css variables are coming from here */
+
+.services{
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+
+    .services-col{
+        flex: $three-col;
+        padding: $gutter $gutter;
+
+
+        .services-paper{
+            height: auto;
+            width: 100%;
+            background-color: $offwhite;
+            padding: $med-padd;
+
+            .services-font{
+                line-height: 1.5em;
+                font-family: $poppins;
+                font-weight: 500;
+            }
+    
+        }
+         
+
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .services{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        .services-col{
+            flex: $one-col;
+            
+             
+    
+        }
+
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .services{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        .services-col{
+            flex: $one-col;
+            padding: $gutter 0;
+             
+    
+        }
+
+    }
+  }

@@ -1,0 +1,101 @@
+@import "../../../index.scss"; /* All css variables are coming from here */
+
+.about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+    
+
+    .about-col{
+        flex: $two-col;
+        padding: $gutter $gutter;
+
+
+
+        .about-img{
+            width: 100%;
+            height: auto;
+
+        }
+
+        .about-heading{
+            font-family: $poppins;
+            font-weight: 500;
+            line-height: $head-line-height;
+
+            
+        }
+        .about-sub{
+            font-family: $poppins;
+            line-height: $sub-line-height;
+            font-size: $med-font;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .about{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .about-col{
+            flex: $one-col;
+            padding: $gutter $gutter;
+
+            .about-heading{
+                text-align: justify;
+                font-size: $lg-font;
+                margin-bottom: $lg-mar;
+            }
+
+            .about-sub{
+                font-family: $poppins;
+                line-height: $sub-line-height;
+                font-size: $med-font;
+            }
+
+
+            .about-img{
+                width: 70%;
+                height: auto;
+    
+            }
+
+        }
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    .about{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .about-col{
+            flex: $one-col;
+            padding: $gutter $gutter;
+
+            .about-heading{
+                text-align: justify;
+                font-size: $med-font;
+                margin-bottom: $lg-mar;
+            }
+
+            .about-sub{
+                font-family: $poppins;
+                line-height: $sub-line-height;
+                font-size: $sm-font;
+            }
+
+        }
+    }
+
+}

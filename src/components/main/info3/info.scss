@@ -1,0 +1,118 @@
+@import "../../../index.scss"; /* All css variables are coming from here */
+
+.info3{
+    width: 100%;
+    height: 80vh;
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+    url("https://static.vecteezy.com/system/resources/previews/000/555/131/non_2x/vector-soccer-player-silhouette.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+    .info3-col{
+        align-self: center;
+        padding: $gutter $gutter;
+        max-width: 50%;
+
+        .info3-heading{
+            font-family: $poppins;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+            line-height: $head-line-height;
+            word-wrap: none;
+        }
+
+        .info3-sub{
+            font-family: $poppins;
+            color: white;
+            font-size: $med-font;
+            
+        }
+
+        .info3-butn{
+            font-family: $poppins;
+            font-weight: 400;
+            font-size: $med-font;
+            padding: 0 $lg-padd;
+            transition: all .3s;
+
+            &:hover{
+                border: 4px solid $pink;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        }
+        
+    }
+
+    
+    
+}
+
+@media only screen and (max-width: 800px){
+    
+    .info3{
+        width: 100%;
+        height: auto;
+        background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+        url("https://static.vecteezy.com/system/resources/previews/000/555/131/non_2x/vector-soccer-player-silhouette.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        .info3-col{
+            align-self: center;
+            padding: $gutter $gutter;
+            max-width: 100%;
+
+
+            .info3-heading{
+                font-family: $poppins;
+                color: white;
+                text-transform: uppercase;
+                font-weight: 500;
+                line-height: $head-line-height;
+                word-wrap: none;
+                text-align: justify;
+                font-size: $med-font;
+            }
+
+            .info3-sub{
+                font-family: $poppins;
+                color: white;
+                font-size: $sm-font;
+                
+            }
+            
+            .info3-butn{
+                font-family: $poppins;
+                font-weight: 600;
+                font-size: $sm-font;
+                transition: all .3s;
+    
+                &:hover{
+                    border: 4px solid $pink;
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+@import "../../../index.scss"; /* All css variables are coming from here */
+
+.coaches{
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    .coaches-heading{
+        padding: $gutter $gutter;
+        align-self: center;
+
+
+        .coaches-heading-font{
+            font-family: $poppins;
+            font-weight: 700;
+            border-bottom: 2px solid $pink;
+        }
+    }
+
+    .coaches-cards{
+        padding: $gutter $gutter;
+        display: flex;
+        
+
+
+
+        .coaches-card{
+            flex: $three-col;
+            padding: $lg-padd;
+
+
+            .coaches-card-item{
+                background-color: $offwhite;
+                width: 100%;
+                transition: .3s;
+                &:hover{
+                    box-shadow: 0 16px 70px -12.125px rgba(0,0,0,0.7);
+                }
+
+                .coaches-card-heading{
+                    font-family: $poppins;
+                }
+
+                .coaches-card-sub{
+                    font-family: $poppins;
+                }
+
+                .coaches-divider{
+                    margin: $lg-mar 0;
+                }
+
+                .coaches-avatar{
+                    display: inline-block;
+                    border: 2px solid white;
+                    padding: 5px 0px 0px 4px;
+                    margin-left: -8px;
+                    
+                    i{
+                        font-size: $med-font;
+                        color: $pink;
+                        
+                    }
+                }
+
+                .coaches-card-media{
+                    height: 350px;
+                    background-position: top;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 800px){
+    .coaches{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        .coaches-cards{
+            padding: $gutter $gutter;
+            display: flex;
+            flex-direction: column;
+            margin: $med-mar 0;
+
+        .coaches-card{
+            flex: $one-col;
+            padding: 0;
+            margin: $med-mar 0;
+            
+            
+
+
+            .coaches-card-item{
+
+
+                .coaches-card-media{
+                    height: 400px;
+                    background-position-y: -200px;
+                }
+            }
+
+        }
+    }
+    }
+}
+@media only screen and (max-width: 600px){
+    .coaches{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        .coaches-cards{
+            padding: $gutter $gutter;
+            display: flex;
+            flex-direction: column;
+            margin: $med-mar 0;
+
+        .coaches-card{
+            flex: $one-col;
+            padding: 0;
+            margin: $med-mar 0;
+            
+
+
+            .coaches-card-item{
+
+
+                .coaches-card-media{
+                    height: 300px;
+                    background-position-y: -90px;
+                }
+            }
+
+        }
+    }
+    }
+}
+
+@media only screen and (max-width: 497px){
+    .coaches{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        .coaches-cards{
+            padding: $gutter $gutter;
+            display: flex;
+            flex-direction: column;
+            margin: $med-mar 0;
+
+        .coaches-card{
+            flex: $one-col;
+            padding: 0;
+            margin: $med-mar 0;
+            
+
+
+            .coaches-card-item{
+
+
+                .coaches-card-media{
+                    height: 300px;
+                    background-position: top;
+                }
+            }
+
+        }
+    }
+    }
+}

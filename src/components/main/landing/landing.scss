@@ -1,0 +1,123 @@
+@import "../../../index.scss";/* All css variables are coming from index.scss */
+
+.landing{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+
+
+    .landing-col{
+        flex: $two-col;
+        padding: $gutter $gutter; 
+        
+
+        .landing-items{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+
+            .landing-imgs{ /* Use grid to overlap the images nicely */
+                display: grid;
+                grid-template-areas: "pic";
+                grid-template-columns: 1fr;
+
+                .landing-img1{
+                    grid-area: pic;
+                    width: 70%;
+                    height: auto;
+                    z-index: 5;
+                    align-self: end;
+                 }
+                 .landing-img2{
+                    grid-area: pic;
+                    width: 100%;
+                    height: auto;
+                    z-index: 1;
+                    align-self: start;
+                    
+                 }
+            }
+            
+            .landing-heading {
+                font-family: $poppins;
+                font-weight: 700;
+                line-height: $head-line-height;
+                color: white;
+                
+          }
+            .landing-sub{
+                font-family: $poppins;
+                line-height: $sub-line-height;
+                padding-top: $med-padd;
+                padding-bottom: $med-padd;
+                color: white;
+            }
+            .landing-button{
+                margin-top: $med-mar;
+                padding: 0 $lg-padd;
+
+                .landing-button-text{
+                    font-family: $poppins;
+                    font-size: $sm-font;
+
+                }
+
+                .landing-rightIcon{
+                    margin-left: $sm-mar;
+                }
+
+                &:hover{
+                    border: 4px solid $pink;
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+
+        
+        
+        
+    }
+}
+
+.landing-bg{
+    background-color: #DD1188;
+    background: url("../../../imgs/rena.svg");
+    background-size: contain;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .landing{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+
+        .landing-heading {
+            font-family: $poppins;
+            font-weight: 700;
+            line-height: $head-line-height;
+            color: white;
+            text-align: justify;
+            font-size: $lg-font;
+      }
+      .landing-sub{
+        font-family: $poppins;
+        font-size: $sm-font;
+        line-height: $sub-line-height;
+        padding-top: $med-padd;
+        padding-bottom: $med-padd;
+        color: white;
+    }
+
+    }
+    .landing-bg{
+        background-color: #DD1188;
+        background: url("../../../imgs/rena.svg");
+        background-size: cover;
+    }
+  }
+
+ 

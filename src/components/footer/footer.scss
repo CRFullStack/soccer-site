@@ -1,0 +1,111 @@
+@import "../../index.scss"; /* All css variables come from here yo */
+
+.footer{
+    margin-top: -$section-height-control;
+    width: 100%;
+    height: 25vh;
+    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,1));
+    display: flex;
+    flex-direction: column;
+    
+
+    .footer-content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $gutter $gutter;
+
+        .footer-logo{
+            flex: 30%;
+            color: white;
+            
+
+            .footer-logo-butn{
+                margin-right: $sm-padd;
+                font-family: $poppins;
+                font-weight: 700;
+            }
+        }
+        .footer-links{
+            flex: 40%;
+            color: white;
+
+            .footer-link{
+                font-family: $poppins;
+                padding: $med-padd;
+            }
+        }
+        .footer-social{
+            flex: 10%;
+            color: white;
+        
+            i{
+                font-size: $sm-font;
+                padding: 0 $sm-padd;
+            }
+            .fab.fa-facebook{
+                color: blue;
+            }
+            .fab.fa-twitter{
+                color: lightblue;
+            }
+            .fas.fa-wifi{
+                color: white;
+            }
+            .fab.fa-google-plus{
+                color: red;
+            }
+        }
+    }
+
+    .footer-divider{
+        background-color: rgba(255,255,255,.9);
+        margin-left:$gutter;
+        margin-right: $gutter;
+        margin-top: $gutter;
+        
+    }
+
+    .footer-copy{
+        color: white;
+        padding-top: $sm-padd;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .footer{
+        margin-top: -$section-height-control;
+        width: 100%;
+        height: auto;
+        background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,1));
+        display: flex;
+        flex-direction: column;
+
+
+        .footer-content{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: $gutter 0;
+
+            .footer-links{
+                flex: 40%;
+                color: white;
+    
+                .footer-link{
+                    font-family: $poppins;
+                    padding: $sm-padd;
+                }
+            }
+
+        }
+
+    }
+
+}

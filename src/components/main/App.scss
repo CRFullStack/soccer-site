@@ -1,0 +1,22 @@
+/*
+This is the layout for the landing page
+sections will include:
+landing, about, pic, coaches, pic, activities, pic, prices, location, pic, footer.
+
+We'll have a 12 col grid for desktop
+*/
+
+@import "../../index.scss";
+
+.App{
+    overflow-x: hidden;
+    width: 100%;
+    
+
+    section{
+        margin-bottom: $section-height-control;
+        
+    }
+    
+}
+

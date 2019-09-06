@@ -1,0 +1,47 @@
+@import "../../../index.scss"; /* All css variables come from here */
+
+
+.prices {
+
+
+
+    .prices-heading{
+        font-family: $poppins;
+        font-weight: 400;
+    }
+
+    .prices-sub{
+        font-family: $poppins;
+        
+    }
+
+    .prices-cardHeader{
+        font-family: $poppins !important;
+    }
+
+    .prices-price{
+        font-family: $poppins;
+    }
+
+    .prices-listitem{
+        font-family: $poppins;
+    }
+
+    .prices-butn{
+        font-family: $poppins;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 800px){
+    .prices{
+        .prices-sub{
+            font-family: $poppins;
+            font-size: $sm-font;
+            
+        }
+    }
+}
