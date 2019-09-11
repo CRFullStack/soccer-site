@@ -12,7 +12,7 @@ export default function Landing() {
     <React.Fragment>
       <CssBaseline />
       <section className={`about`}>
-        <Fade right>
+        <Fade right big delay={200} duration={3000}>
           <div className="about-col">
             <img src={img8} alt="Hmmmm" className={"about-img"} />
           </div>
