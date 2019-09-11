@@ -27,6 +27,9 @@ export const useStyles2 = makeStyles(theme => ({
   link: {
     margin: theme.spacing(1),
     fontFamily: "'Poppins', sans-serif"
+  },
+  drawer: {
+    backgroundColor: "pink"
   }
 }));
 

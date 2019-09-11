@@ -3,6 +3,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { Typography, GridListTile, GridList } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import tileData from "./tileData";
+import Rotate from "react-reveal/Rotate";
 import "./activities.scss";
 
 /**
@@ -67,13 +68,15 @@ export default function Landing() {
         </div>
         <div className="activities-col">
           <div className={classes.root}>
-            <GridList cellHeight={160} className={classes.gridList} cols={3}>
-              {tileData.map(tile => (
-                <GridListTile key={tile.img} cols={tile.cols || 1}>
-                  <img src={tile.img} alt={tile.title} />
-                </GridListTile>
-              ))}
-            </GridList>
+            <Rotate top right>
+              <GridList cellHeight={160} className={classes.gridList} cols={3}>
+                {tileData.map(tile => (
+                  <GridListTile key={tile.img} cols={tile.cols || 1}>
+                    <img src={tile.img} alt={tile.title} />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </Rotate>
           </div>
         </div>
       </section>
