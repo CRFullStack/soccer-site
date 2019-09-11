@@ -1,5 +1,6 @@
 import React from "react";
 import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Typography, Button, Slide } from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
@@ -55,16 +56,19 @@ export default function Landing() {
             </Button>
           </div>
         </div>
-        <Zoom>
-          <div className={`landing-col`}>
-            <div className={`landing-items`}>
-              <div className={`landing-imgs`}>
-                <img src={img1} alt="hmmmmm" className={`landing-img1`} />
+
+        <div className={`landing-col`}>
+          <div className={`landing-items`}>
+            <div className={`landing-imgs`}>
+              <Zoom>
                 <img src={img2} alt="hmmmmm" className={`landing-img2`} />
-              </div>
+              </Zoom>
+              <Fade left big delay={800} duration={3000}>
+                <img src={img1} alt="hmmmmm" className={`landing-img1`} />
+              </Fade>
             </div>
           </div>
-        </Zoom>
+        </div>
       </section>
     </React.Fragment>
   );
