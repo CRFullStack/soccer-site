@@ -10,13 +10,20 @@ import {
   Fab,
   Typography,
   Hidden,
-  Drawer
+  Drawer,
+  Divider,
+  List,
+  ListItem,
+  ListItemIcon
 } from "@material-ui/core";
 import { Link as Links } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
+import DraftsIcon from "@material-ui/icons/Drafts";
+import InboxIcon from "@material-ui/icons/Inbox";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import ScrollTop from "./navFuncs";
 import { useStyles2 } from "./navStyles";
+import "./nav.scss";
 
 ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
@@ -70,33 +77,63 @@ export default function BackToTop(props) {
               anchor="right"
               open={state.right}
               onClose={toggleDrawer("right", false)}
+              PaperProps={classes.drawer}
             >
-              <div>
-                <Typography component={"div"} className={classes.links}>
-                  <Link
-                    component={Links}
-                    to={`/`}
+              <div className="drawer">
+                <Typography
+                  component={"div"}
+                  className={`${classes.links} drawer-links`}
+                >
+                  <IconButton
+                    edge="end"
+                    className={classes.menuButton}
                     color="inherit"
-                    className={classes.link}
+                    aria-label="menu"
                   >
-                    Home
-                  </Link>
-                  <Link
-                    component={Links}
-                    to={`/signup`}
-                    color="inherit"
-                    className={classes.link}
-                  >
-                    Sign Up
-                  </Link>
-                  <Link
-                    component={Links}
-                    to={`/contact`}
-                    color="inherit"
-                    className={classes.link}
-                  >
-                    Contact
-                  </Link>
+                    Club Soccer
+                  </IconButton>
+                  <Divider />
+                  <List component="nav" aria-label="main mailbox folders">
+                    <ListItem button>
+                      <ListItemIcon>
+                        <InboxIcon />
+                      </ListItemIcon>
+                      <Link
+                        component={Links}
+                        to={`/`}
+                        color="inherit"
+                        className={classes.link}
+                      >
+                        Home
+                      </Link>
+                    </ListItem>
+                    <ListItem button>
+                      <ListItemIcon>
+                        <DraftsIcon />
+                      </ListItemIcon>
+                      <Link
+                        component={Links}
+                        to={`/signup`}
+                        color="inherit"
+                        className={classes.link}
+                      >
+                        Sign Up
+                      </Link>
+                    </ListItem>
+                    <ListItem button>
+                      <ListItemIcon>
+                        <DraftsIcon />
+                      </ListItemIcon>
+                      <Link
+                        component={Links}
+                        to={`/contact`}
+                        color="inherit"
+                        className={classes.link}
+                      >
+                        Contact
+                      </Link>
+                    </ListItem>
+                  </List>
                 </Typography>
               </div>
             </Drawer>

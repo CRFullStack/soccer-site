@@ -1,6 +1,7 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Typography, Button, Grid } from "@material-ui/core";
+import Fade from "react-reveal/Fade";
 import { useStyles } from "./aboutStyles";
 import "./about.scss";
 import img8 from "../../../imgs/img8.svg";
@@ -11,9 +12,11 @@ export default function Landing() {
     <React.Fragment>
       <CssBaseline />
       <section className={`about`}>
-        <div className="about-col">
-          <img src={img8} alt="Hmmmm" className={"about-img"} />
-        </div>
+        <Fade right>
+          <div className="about-col">
+            <img src={img8} alt="Hmmmm" className={"about-img"} />
+          </div>
+        </Fade>
         <div className="about-col">
           <Typography
             className="about-heading"

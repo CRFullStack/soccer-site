@@ -1,6 +1,7 @@
 import React from "react";
+import Zoom from "react-reveal/Zoom";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Typography, Button, Grid } from "@material-ui/core";
+import { Typography, Button, Slide } from "@material-ui/core";
 import CheckIcon from "@material-ui/icons/Check";
 import { useStyles } from "./landingStyles";
 import "./landing.scss";
@@ -54,14 +55,16 @@ export default function Landing() {
             </Button>
           </div>
         </div>
-        <div className={`landing-col`}>
-          <div className={`landing-items`}>
-            <div className={`landing-imgs`}>
-              <img src={img1} alt="hmmmmm" className={`landing-img1`} />
-              <img src={img2} alt="hmmmmm" className={`landing-img2`} />
+        <Zoom>
+          <div className={`landing-col`}>
+            <div className={`landing-items`}>
+              <div className={`landing-imgs`}>
+                <img src={img1} alt="hmmmmm" className={`landing-img1`} />
+                <img src={img2} alt="hmmmmm" className={`landing-img2`} />
+              </div>
             </div>
           </div>
-        </div>
+        </Zoom>
       </section>
     </React.Fragment>
   );

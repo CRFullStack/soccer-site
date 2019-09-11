@@ -1,0 +1,19 @@
+@import "../../index.scss"; /* All css variables come from here */
+
+.MuiDrawer-root{
+
+    .MuiDrawer-paper{
+        background-color: #ccc;
+
+        .drawer{
+    
+            .drawer-links{
+                display: flex;
+                flex-direction: column;
+                width: 200px;
+                padding: $sm-padd;
+            }
+
+        }
+    }
+}
